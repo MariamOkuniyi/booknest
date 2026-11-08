@@ -37,17 +37,40 @@ The application uses three related tables:
 
 ![BookNest ERD](docs/BooknestERD.png)
 
+
 ## Data Sources
-Faker generates sample book titles, author names,
-biographies, descriptions, and prices.
 
-Ten predefined categories are also used.
+BookNest uses the following sources:
 
-The database contains:
-- 250 books
-- 20 authors
+### 1. Faker Gem
+Faker generates sample author names, countries,
+biographies, book titles, descriptions, and prices.
+
+Source: https://github.com/faker-ruby/faker
+
+### 2. Open Library Bibliographic Reference
+Five classic books were manually added using
+bibliographic information for real published works.
+
+The records include book titles, author names,
+and original publication years.
+
+Source: https://openlibrary.org/
+
+The book descriptions and prices are sample values.
+These records are manually entered, not imported
+directly from the Open Library API.
+
+### 3. Predefined Categories
+Ten book categories are defined in the seed script.
+
+## Database Record Counts
+
+- 255 books
+- 25 authors
 - 10 categories
-- 280 records in total
+- 290 records in total
+
 
 ## Application Features
 - Browse the book catalogue
