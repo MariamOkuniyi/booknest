@@ -68,6 +68,62 @@ end
 
 puts "Created #{Book.count} books."
 
+
+# Additional data source: Open Library
+# Source: https://openlibrary.org/
+# Real book titles, authors, and publication years.
+# Descriptions and catalogue prices are sample values.
+
+open_library_books = [
+  {
+    title: "Pride and Prejudice",
+    author: "Jane Austen",
+    year: 1813
+  },
+  {
+    title: "Frankenstein",
+    author: "Mary Shelley",
+    year: 1818
+  },
+  {
+    title: "The Adventures of Sherlock Holmes",
+    author: "Arthur Conan Doyle",
+    year: 1892
+  },
+  {
+    title: "The Time Machine",
+    author: "H. G. Wells",
+    year: 1895
+  },
+  {
+    title: "The Wonderful Wizard of Oz",
+    author: "L. Frank Baum",
+    year: 1900
+  }
+]
+
+# Create real book records from the second source.
+open_library_books.each do |book_data|
+
+  author = Author.find_or_create_by!(
+    name: book_data[:author]
+  ) do |record|
+    record.country = "Unknown"
+    record.biography = "Author of #{book_data[:title]}."
+  end
+
+  Book.create!(
+    title: book_data[:title],
+    description: "A classic literary work by #{book_data[:author]}.",
+    price: 19.99,
+    publication_year: book_data[:year],
+    author: author,
+    category: Category.find_by!(name: "Fiction")
+  )
+end
+
+puts "Added #{open_library_books.length} classic books."
+
 # Display the total number of records.
 total = Author.count + Category.count + Book.count
 
