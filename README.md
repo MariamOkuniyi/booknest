@@ -35,7 +35,7 @@ The application uses three related tables:
 
 ## Entity Relationship Diagram (ERD)
 
-![BookNest ERD](docs/BookERD.png)
+![BookNest ERD](docs/BooknestERD.png)
 
 ## Data Sources
 Faker generates sample book titles, author names,
