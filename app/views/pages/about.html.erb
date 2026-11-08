@@ -21,48 +21,68 @@
     </div>
   </div>
 
-  <div class="card shadow-sm mb-4">
-    <div class="card-body">
-      <h2>Data Source</h2>
-      <p>
-        BookNest uses the Faker Ruby gem to generate
-        fictional sample data, including author names,
-        book titles, descriptions, and other attributes.
-      </p>
-      <p>
-        The data is generated and imported using the
-        Rails db/seeds.rb script.
-      </p>
-      <p>
-        <strong>Dataset:</strong>
-        250 books, 20 authors, and 10 categories.
-        Total: 280 records.
-      </p>
-    </div>
+<!-- Data Sources -->
+<div class="card shadow-sm mb-4">
+  <div class="card-body">
+    <h2>Data Sources</h2>
+
+    <p>
+      BookNest uses Faker to generate sample book titles,
+      author information, descriptions, and prices.
+    </p>
+
+    <p>
+      Five classic books were also manually added using
+      real bibliographic information, including titles,
+      authors, and publication years.
+      Open Library is listed as a bibliographic reference.
+    </p>
+
+    <p>
+      Ten predefined book categories are included.
+    </p>
+
+    <ul>
+      <li>255 Books</li>
+      <li>25 Authors</li>
+      <li>10 Categories</li>
+      <li>290 Total Records</li>
+    </ul>
+
+    <p>
+      <strong>References:</strong>
+      <a href="https://github.com/faker-ruby/faker"
+         target="_blank" rel="noopener noreferrer">Faker</a>
+      |
+      <a href="https://openlibrary.org/"
+         target="_blank" rel="noopener noreferrer">Open Library</a>
+    </p>
   </div>
+</div>
+
 
   <div class="card shadow-sm mb-4">
     <div class="card-body">
       <h2>Database Structure</h2>
 
-      <h5>Authors Table</h5>
+      <h3>Authors Table</h3>
       <p>
         Stores author names, countries, and biographies.
       </p>
 
-      <h5>Categories Table</h5>
+      <h3>Categories Table</h3>
       <p>
         Stores book categories and their descriptions.
       </p>
 
-      <h5>Books Table</h5>
+      <h3>Books Table</h3>
       <p>
         Stores book titles, descriptions, prices,
         publication years, and references to authors
         and categories.
       </p>
 
-      <h5>Database Relationships</h5>
+      <h3>Database Relationships</h3>
       <ul>
         <li>One author can have many books.</li>
         <li>One category can have many books.</li>
@@ -81,6 +101,7 @@
         <li>ActiveRecord ORM</li>
         <li>Faker Gem</li>
         <li>Bootstrap 5</li>
+        <li>Kaminari (Pagination)</li>
         <li>HTML and ERB</li>
       </ul>
     </div>
