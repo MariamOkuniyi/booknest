@@ -63,6 +63,19 @@
 </div>
 
 
+<!-- Display a message when no books match the search -->
+<% if @books.empty? %>
+  <div class="alert alert-warning text-center mt-4">
+    <h5>No books found!</h5>
+    <p>
+      Try another book title or select a different category.
+    </p>
+    <%= link_to "View All Books",
+                books_path,
+                class: "btn btn-primary" %>
+  </div>
+<% end %>
+
 
   <!-- Book catalogue -->
   <div class="mb-4">
