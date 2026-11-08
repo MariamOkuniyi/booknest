@@ -77,3 +77,14 @@ Start the Rails server:
     rails server
 
 Open http://localhost:3000 in your browser.
+
+## GitHub Repository
+
+The complete source code for BookNest is available on GitHub:
+
+[BookNest - GitHub Repository](https://github.com/MariamOkuniyi/booknest)
+
+## Git codes
+git add .
+git commit -m "desired name"
+git push origin main
