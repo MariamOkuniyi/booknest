@@ -1,0 +1,46 @@
+
+<div class="container mt-5 mb-5">
+
+  <!-- Page heading -->
+  <div class="text-center mb-5">
+    <h1>Explore Book Categories 📚</h1>
+    <p class="lead">
+      Browse our collection by your favourite category.
+    </p>
+  </div>
+
+  <!-- Display all categories -->
+  <div class="row g-4">
+    <% @categories.each do |category| %>
+      <div class="col-md-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+
+            <!-- Category name -->
+            <h4 class="card-title">
+              <%= category.name %>
+            </h4>
+
+            <!-- Category description -->
+            <p class="card-text">
+              <%= category.description %>
+            </p>
+
+            <!-- Number of books -->
+            <p>
+              <strong>Books:</strong>
+              <%= category.books.count %>
+            </p>
+
+            <!-- Link to category details -->
+            <%= link_to "Explore Books",
+                        category_path(category),
+                        class: "btn btn-primary" %>
+
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+</div>

@@ -1,0 +1,89 @@
+
+<div class="container mt-5 mb-5">
+
+  <h1 class="text-center mb-4">About BookNest 📚</h1>
+
+  <p class="lead text-center mb-5">
+    BookNest is a Ruby on Rails web application that
+    allows users to explore a collection of books,
+    authors, and categories.
+  </p>
+
+  <div class="card shadow-sm mb-4">
+    <div class="card-body">
+      <h2>Project Overview</h2>
+      <p>
+        The purpose of BookNest is to demonstrate
+        database relationships, data collection,
+        navigation, and information retrieval using
+        Ruby on Rails and ActiveRecord.
+      </p>
+    </div>
+  </div>
+
+  <div class="card shadow-sm mb-4">
+    <div class="card-body">
+      <h2>Data Source</h2>
+      <p>
+        BookNest uses the Faker Ruby gem to generate
+        fictional sample data, including author names,
+        book titles, descriptions, and other attributes.
+      </p>
+      <p>
+        The data is generated and imported using the
+        Rails db/seeds.rb script.
+      </p>
+      <p>
+        <strong>Dataset:</strong>
+        250 books, 20 authors, and 10 categories.
+        Total: 280 records.
+      </p>
+    </div>
+  </div>
+
+  <div class="card shadow-sm mb-4">
+    <div class="card-body">
+      <h2>Database Structure</h2>
+
+      <h5>Authors Table</h5>
+      <p>
+        Stores author names, countries, and biographies.
+      </p>
+
+      <h5>Categories Table</h5>
+      <p>
+        Stores book categories and their descriptions.
+      </p>
+
+      <h5>Books Table</h5>
+      <p>
+        Stores book titles, descriptions, prices,
+        publication years, and references to authors
+        and categories.
+      </p>
+
+      <h5>Database Relationships</h5>
+      <ul>
+        <li>One author can have many books.</li>
+        <li>One category can have many books.</li>
+        <li>Each book belongs to one author.</li>
+        <li>Each book belongs to one category.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card shadow-sm mb-4">
+    <div class="card-body">
+      <h2>Technologies Used</h2>
+      <ul>
+        <li>Ruby on Rails</li>
+        <li>SQLite Database</li>
+        <li>ActiveRecord ORM</li>
+        <li>Faker Gem</li>
+        <li>Bootstrap 5</li>
+        <li>HTML and ERB</li>
+      </ul>
+    </div>
+  </div>
+
+</div>

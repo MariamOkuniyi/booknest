@@ -1,0 +1,66 @@
+
+<div class="container mt-5">
+
+  <!-- Back to book catalogue -->
+  <%= link_to "← Back to Books",
+              books_path,
+              class: "btn btn-secondary mb-4" %>
+
+  <div class="card shadow-sm">
+    <div class="card-body">
+
+      <!-- Book title -->
+      <h1 class="card-title mb-4">
+        <%= @book.title %>
+      </h1>
+
+      <!-- Author information -->
+      <p>
+        <strong>Author:</strong>
+        <%= @book.author.name %>
+      </p>
+
+
+    <!-- Category information with clickable link -->
+    <p>
+      <strong>Category:</strong>
+      <%= link_to @book.category.name,
+                  category_path(@book.category),
+                  class: "text-decoration-none fw-bold" %>
+    </p>
+
+
+      <!-- Publication year -->
+      <p>
+        <strong>Publication Year:</strong>
+        <%= @book.publication_year %>
+      </p>
+
+      <!-- Book price -->
+      <p>
+        <strong>Price:</strong>
+        <%= number_to_currency(@book.price) %>
+      </p>
+
+      <!-- Book description -->
+      <h4 class="mt-4">Description</h4>
+      <p>
+        <%= @book.description %>
+      </p>
+
+      <!-- Additional author information -->
+      <h4 class="mt-4">About the Author</h4>
+
+      <p>
+        <strong>Country:</strong>
+        <%= @book.author.country %>
+      </p>
+
+      <p>
+        <%= @book.author.biography %>
+      </p>
+
+    </div>
+  </div>
+
+</div>
